@@ -27,6 +27,13 @@ cd /bak/ibcsv/csv_files/
 cp -p /etc/hosts.allow random_old_file.csv
 find . -type f -name '*.csv' -mtime +1 -print | xargs ls -l
 
+# see if -1 works okay:
+# find . -type f -mtime -1 -print | xargs ls -l
+
+find . -type f -name '*.csv' -mtime +1 -exec mv {} /bak/ibcsv/csv_files_old/ \;
+ls -l /bak/ibcsv/csv_files_old/*.csv
+
+
 exit
 
 /pt/s/r/ibcsv/1tkr_dl2csv.bash DIA
