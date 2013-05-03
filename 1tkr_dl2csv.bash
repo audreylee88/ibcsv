@@ -24,7 +24,7 @@ cd /pt/s/r/ibcsv/
 
 rsync -a /pt/s/r/ibcsv /bak/
 
-cd /bak/ibcsv/ibapi/
+cd /bak/ibcsv/
 sleep 2
 jruby req_hdata_1D.rb $TKR
 
