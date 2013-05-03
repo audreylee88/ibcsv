@@ -37,7 +37,8 @@ ls -l /bak/ibcsv/csv_files_old/*
 gzip -9f /bak/ibcsv/csv_files_old/*.csv
 ls -l /bak/ibcsv/csv_files_old/*
 
-exit
+# Hopefully that bought me some space.
+# Go get new data:
 
 /pt/s/r/ibcsv/1tkr_dl2csv.bash DIA
 /pt/s/r/ibcsv/1tkr_dl2csv.bash EFA 
@@ -54,3 +55,4 @@ exit
 # New files should now be here:
 # /bak/ibcsv/csv_files/
 
+exit
