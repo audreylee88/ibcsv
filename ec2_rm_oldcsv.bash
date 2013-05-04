@@ -7,7 +7,9 @@
 # This script removes old CSV files from the ec2 host.
 
 # Demo:
-# ssh ec210 /pt/s/r/ibcsv/ec2_rm_oldcsv.bash
+# ssh ec210 'bash -x /pt/s/r/ibcsv/ec2_rm_oldcsv.bash'
+# Avoid doing this:
+# bash -x /pt/s/r/ibcsv/ec2_rm_oldcsv.bash
 
 # Now assume I'm on an ec2 host,
 # not in the office.
@@ -22,7 +24,6 @@ rsync -a /pt/s/r/ibcsv /bak/
 cd /bak/ibcsv/csv_files/
 cp -p /etc/hosts.allow /bak/ibcsv/csv_files/random_old_file.csv
 find /bak/ibcsv/csv_files/ -type f -name '*.csv' -mtime +1 -print | xargs ls -l
-exit
 find /bak/ibcsv/csv_files/ -type f -name '*.csv' -mtime +1 -print | xargs rm -f
 
 exit
